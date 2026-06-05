@@ -1,0 +1,85 @@
+.final-cta {
+  background-color: var(--color-gray-100);
+}
+
+.final-cta__inner {
+  background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark) 100%);
+  border-radius: var(--radius-xl);
+  padding: 72px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta__decor {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-yellow);
+}
+
+.final-cta__decor--1 {
+  width: 300px;
+  height: 300px;
+  opacity: 0.06;
+  top: -100px;
+  right: -80px;
+}
+
+.final-cta__decor--2 {
+  width: 200px;
+  height: 200px;
+  opacity: 0.04;
+  bottom: -60px;
+  left: -40px;
+}
+
+.final-cta__title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.final-cta__text {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 36px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.final-cta__btn {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .final-cta__inner {
+    padding: 56px 32px;
+  }
+
+  .final-cta__title {
+    font-size: 1.75rem;
+  }
+
+  .final-cta__text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .final-cta__inner {
+    padding: 48px 24px;
+    border-radius: var(--radius-lg);
+  }
+
+  .final-cta__title {
+    font-size: 1.5rem;
+  }
+}

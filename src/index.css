@@ -1,0 +1,187 @@
+/* ===== CSS Variables ===== */
+:root {
+  --color-yellow: #FFD60A;
+  --color-yellow-hover: #FFC800;
+  --color-yellow-light: #FFF8D6;
+  --color-black: #1A1A1A;
+  --color-dark: #2D2D2D;
+  --color-gray-700: #4A4A4A;
+  --color-gray-500: #7A7A7A;
+  --color-gray-300: #B8B8B8;
+  --color-gray-100: #F5F5F5;
+  --color-white: #FFFFFF;
+  --color-bg: #FAFAFA;
+
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.12);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --container-max: 1140px;
+  --section-padding: 80px 0;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ===== Utility Classes ===== */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-gray-700);
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  box-shadow: 0 4px 14px rgba(255, 214, 10, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-yellow-hover);
+  box-shadow: 0 6px 20px rgba(255, 214, 10, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 214, 10, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 2px solid var(--color-gray-300);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-black);
+  background-color: var(--color-gray-100);
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  padding: 18px 48px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 56px 0;
+  }
+
+  .section-title {
+    font-size: 1.625rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9375rem;
+  }
+
+  .btn-large {
+    padding: 16px 36px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-title {
+    font-size: 1.375rem;
+  }
+}

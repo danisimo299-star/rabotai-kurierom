@@ -1,0 +1,122 @@
+.conditions {
+  background-color: var(--color-white);
+}
+
+.conditions__title {
+  text-align: center;
+}
+
+.conditions__subtitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.conditions__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.conditions__card {
+  background: var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  transition: all var(--transition);
+  border: 1px solid transparent;
+}
+
+.conditions__card:hover {
+  background: var(--color-white);
+  border-color: var(--color-yellow);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.conditions__card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-yellow-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--color-black);
+  transition: all var(--transition);
+}
+
+.conditions__card:hover .conditions__card-icon {
+  background: var(--color-yellow);
+}
+
+.conditions__card-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+.conditions__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.conditions__card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9375rem;
+  color: var(--color-gray-700);
+  line-height: 1.5;
+}
+
+.conditions__bullet {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  margin-top: 7px;
+}
+
+.conditions__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--color-yellow-light);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.conditions__note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.conditions__note p {
+  font-size: 0.9375rem;
+  color: var(--color-gray-700);
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .conditions__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .conditions__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .conditions__card {
+    padding: 24px 20px;
+  }
+}

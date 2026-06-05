@@ -1,0 +1,168 @@
+.bonus-conditions {
+  background-color: var(--color-gray-100);
+}
+
+.bonus-conditions__title {
+  text-align: center;
+}
+
+.bonus-conditions__subtitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bonus-conditions__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.bonus-conditions__card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  border: 2px solid transparent;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bonus-conditions__card:hover {
+  border-color: var(--color-yellow);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.bonus-conditions__card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bonus-conditions__card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--color-yellow-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.bonus-conditions__card:hover .bonus-conditions__card-icon {
+  background: var(--color-yellow);
+}
+
+.bonus-conditions__card-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.bonus-conditions__card-bonus {
+  background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark) 100%);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bonus-conditions__card-bonus-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bonus-conditions__card-bonus-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-yellow);
+  line-height: 1.1;
+}
+
+.bonus-conditions__card-orders {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bonus-conditions__order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bonus-conditions__order-service {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.bonus-conditions__order-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: var(--color-yellow-light);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+/* Last two cards centered on 3-column grid */
+@media (min-width: 961px) {
+  .bonus-conditions__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Center the last row when it has fewer items */
+  .bonus-conditions__card:nth-child(4) {
+    grid-column: 1 / 2;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .bonus-conditions__card:nth-child(5) {
+    grid-column: 2 / 3;
+  }
+
+  /* When there are 5 items, shift last 2 to center */
+  .bonus-conditions__grid {
+    justify-items: stretch;
+  }
+}
+
+@media (max-width: 960px) {
+  .bonus-conditions__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bonus-conditions__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .bonus-conditions__card {
+    padding: 24px 20px;
+  }
+
+  .bonus-conditions__card-bonus-value {
+    font-size: 1.5rem;
+  }
+}
